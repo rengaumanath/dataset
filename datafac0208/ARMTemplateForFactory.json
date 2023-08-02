@@ -29,7 +29,7 @@
 	},
 	"resources": [
 		{
-			"name": "[concat(parameters('factoryName'), '/DelimitedText1')]",
+			"name": "[concat(parameters('factoryName'), '/sourcesExcel1')]",
 			"type": "Microsoft.DataFactory/factories/datasets",
 			"apiVersion": "2018-06-01",
 			"properties": {
@@ -38,66 +38,63 @@
 					"type": "LinkedServiceReference"
 				},
 				"annotations": [],
-				"type": "DelimitedText",
+				"type": "Excel",
 				"typeProperties": {
+					"sheetName": "Original sheet",
 					"location": {
 						"type": "AzureBlobFSLocation",
-						"fileName": "winequality.csv",
+						"fileName": "Data Points for Summary.xlsx",
 						"fileSystem": "practisefile"
 					},
-					"columnDelimiter": ",",
-					"rowDelimiter": "\n",
-					"escapeChar": "\\",
-					"firstRowAsHeader": true,
-					"quoteChar": "\""
+					"firstRowAsHeader": true
 				},
 				"schema": [
 					{
-						"name": "Prop_0",
+						"name": "Target",
 						"type": "String"
 					},
 					{
-						"name": "Prop_1",
+						"name": "Regions",
 						"type": "String"
 					},
 					{
-						"name": "Prop_2",
+						"name": "Channel",
 						"type": "String"
 					},
 					{
-						"name": "Prop_3",
+						"name": "2018W51",
 						"type": "String"
 					},
 					{
-						"name": "Prop_4",
+						"name": "2018W52",
 						"type": "String"
 					},
 					{
-						"name": "Prop_5",
+						"name": "2019W 1",
 						"type": "String"
 					},
 					{
-						"name": "Prop_6",
+						"name": "2019W 2",
 						"type": "String"
 					},
 					{
-						"name": "Prop_7",
+						"name": "2019W 3",
 						"type": "String"
 					},
 					{
-						"name": "Prop_8",
+						"name": "2019W 4",
 						"type": "String"
 					},
 					{
-						"name": "Prop_9",
+						"name": "Sum",
 						"type": "String"
 					},
 					{
-						"name": "Prop_10",
+						"name": "Average",
 						"type": "String"
 					},
 					{
-						"name": "Prop_11",
+						"name": "rat%{sum}",
 						"type": "String"
 					}
 				]

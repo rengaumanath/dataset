@@ -1,0 +1,70 @@
+{
+	"name": "sourcesExcel1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sourceAzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Original sheet",
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Data Points for Summary.xlsx",
+				"fileSystem": "practisefile"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "Target",
+				"type": "String"
+			},
+			{
+				"name": "Regions",
+				"type": "String"
+			},
+			{
+				"name": "Channel",
+				"type": "String"
+			},
+			{
+				"name": "2018W51",
+				"type": "String"
+			},
+			{
+				"name": "2018W52",
+				"type": "String"
+			},
+			{
+				"name": "2019W 1",
+				"type": "String"
+			},
+			{
+				"name": "2019W 2",
+				"type": "String"
+			},
+			{
+				"name": "2019W 3",
+				"type": "String"
+			},
+			{
+				"name": "2019W 4",
+				"type": "String"
+			},
+			{
+				"name": "Sum",
+				"type": "String"
+			},
+			{
+				"name": "Average",
+				"type": "String"
+			},
+			{
+				"name": "rat%{sum}",
+				"type": "String"
+			}
+		]
+	}
+}

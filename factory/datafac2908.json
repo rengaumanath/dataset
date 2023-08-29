@@ -1,0 +1,9 @@
+{
+	"name": "datafac2908",
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3c54109a-1318-4ec8-8fdc-075c21424709",
+		"tenantId": "73d4811d-345e-4ab8-af1d-9c68f78924f0"
+	}
+}
